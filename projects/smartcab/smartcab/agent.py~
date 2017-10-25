@@ -44,7 +44,7 @@ class LearningAgent(Agent):
           self.epsilon = 0
           self.alpha = 0
         else:
-          self.epsilon = 0.9**self.counter
+          self.epsilon = 0.999**self.counter
           self.counter += 1
         return None
 
