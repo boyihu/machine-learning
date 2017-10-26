@@ -1,0 +1,15 @@
+  File "smartcab/agent.py", line 209, in <module>
+    run()
+  File "smartcab/agent.py", line 205, in run
+    sim.run(n_test=10)
+  File "/home/boyi/Documents/exercise/machine-learning/projects/smartcab/smartcab/simulator.py", line 182, in run
+    self.env.step()
+  File "/home/boyi/Documents/exercise/machine-learning/projects/smartcab/smartcab/environment.py", line 194, in step
+    self.primary_agent.update()
+  File "smartcab/agent.py", line 158, in update
+    action = self.choose_action(state)  # Choose an action
+  File "smartcab/agent.py", line 126, in choose_action
+    maxQValue = self.get_maxQ(state)
+  File "smartcab/agent.py", line 88, in get_maxQ
+    if maxQ < self.Q[state][action]:
+KeyError: 'red'
