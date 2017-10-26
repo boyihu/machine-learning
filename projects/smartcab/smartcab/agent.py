@@ -44,7 +44,8 @@ class LearningAgent(Agent):
           self.epsilon = 0
           self.alpha = 0
         else:
-          self.epsilon = 0.9**self.counter
+          #self.epsilon = 0.99**self.counter
+          self.epsilon -= 0.05
           self.counter += 1
         return None
 
@@ -171,7 +172,7 @@ def run():
     #   verbose     - set to True to display additional output from the simulation
     #   num_dummies - discrete number of dummy agents in the environment, default is 100
     #   grid_size   - discrete number of intersections (columns, rows), default is (8, 6)
-    env = Environment()
+    env = Environment(verbose = True)
     
     ##############
     # Create the driving agent
